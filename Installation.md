@@ -63,3 +63,4 @@ zsh completions have been installed to:
 ## Setup Views
 
 - create authors.js inside views folder
+  - Create author model (7:50 course 2)
