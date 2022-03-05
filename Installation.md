@@ -25,3 +25,10 @@
 5. Get our models integrated, and connect to a local mongodb database
 
 - install mongodb
+- To start mongodb/brew/mongodb-community now and restart at login: `brew services start mongodb/brew/mongodb-community`
+- Or, if you don't want/need a background service you can just run: `mongod --config /usr/local/etc/mongod.conf`
+
+- start the mongo db service using brew
+- in project directory, run `npm i mongoose`
+
+- `npm i --save-dev dotenv`

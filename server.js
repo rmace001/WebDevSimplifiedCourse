@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
@@ -19,6 +23,14 @@ app.use(expressLayouts);
 
 // stylesheets, javascript, all images go in public
 app.use(express.static("public"));
+
+const mongoose = require("mongoose");
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+
+// log the db connection
+const db = mongoose.connection;
+db.on("error", (error) => console.error(error));
+db.once("open", () => console.log("Connected to Mongoose"));
 
 app.use("/", indexRouter);
 
