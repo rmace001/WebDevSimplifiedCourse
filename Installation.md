@@ -32,3 +32,34 @@
 - in project directory, run `npm i mongoose`
 
 - `npm i --save-dev dotenv`
+
+- ensure this project is on a remote git repo
+- Install Heroku CLI
+- run `heroku login`
+- run the remote setup command: `heroku git:remote -a mybrary-web-dev-rogith`
+  To use the Heroku CLI's autocomplete --
+  Via homebrew's shell completion: 1) Follow homebrew's install instructions https://docs.brew.sh/Shell-Completion
+  NOTE: For zsh, as the instructions mention, be sure compinit is autoloaded
+  and called, either explicitly or via a framework like oh-my-zsh. 2) Then run
+  $ heroku autocomplete --refresh-cache
+  OR
+  Use our standalone setup: 1) Run and follow the install steps:
+  $ heroku autocomplete
+
+zsh completions have been installed to:
+/usr/local/share/zsh/site-functions
+
+6. Mongo db data
+
+- Create a cluster on MongoDB Atlas
+- user: admin
+- pw: KYtwira5F4gHeaVc
+- setup accessible from any ip: 0.0.0.0/0
+
+## Setup Routes
+
+- setup routes/authors.js, the authors controller
+
+## Setup Views
+
+- create authors.js inside views folder
