@@ -1,3 +1,5 @@
+// can use this file to create new authors
+
 const mongoose = require("mongoose");
 
 const authorSchema = new mongoose.Schema({
