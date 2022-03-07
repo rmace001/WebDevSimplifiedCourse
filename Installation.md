@@ -64,3 +64,8 @@ zsh completions have been installed to:
 
 - create authors.js inside views folder
   - Create author model (7:50 course 2)
+
+Books Index/Create/New Routes
+
+- setup routes, headers, models
+- setup our new books page to add books to view later

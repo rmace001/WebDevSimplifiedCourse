@@ -9,6 +9,7 @@ const bodyParser = require("body-parser");
 
 const indexRouter = require("./routes/index");
 const authorRouter = require("./routes/authors");
+const bookRouter = require("./routes/books");
 
 // set the view engine
 app.set("view engine", "ejs");
@@ -38,7 +39,7 @@ db.once("open", () => console.log("Connected to Mongoose"));
 
 app.use("/", indexRouter);
 app.use("/authors", authorRouter);
-
+app.use("/books", bookRouter);
 // tell our app to listen, pull from and env var for z
 // when we deploy, the server's going to tell us what
 // port we are listening to, not us, for development we can
