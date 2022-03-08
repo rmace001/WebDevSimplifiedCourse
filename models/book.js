@@ -1,7 +1,8 @@
 // can use this file to create new authors
 
 const mongoose = require("mongoose");
-
+const path = require("path");
+const coverImageBasePath = "uploads/bookCovers";
 const bookSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -35,4 +36,12 @@ const bookSchema = new mongoose.Schema({
   },
 });
 
+// derive its values based on property fields above
+bookSchema.virtual("coverImagePath").get(function () {
+  if (this.coverImageName != null) {
+    return path.join("/", coverImageBasePath, this.coverImageName);
+  }
+});
+
 module.exports = mongoose.model("Book", bookSchema);
+module.exports.coverImageBasePath = coverImageBasePath;

@@ -69,3 +69,7 @@ Books Index/Create/New Routes
 
 - setup routes, headers, models
 - setup our new books page to add books to view later
+- completely build the form UI, then work on hooking up the backend to use the form to create books
+  - we are not putting coverimage name in this book object yet and thats bcus we need to create the image file from our filesystem, get the name from that, and then save that into our book object the easiest way to do that is to use multer
+  - multer allows you to work on multi-part forms, which is precisely a file form
+  -
