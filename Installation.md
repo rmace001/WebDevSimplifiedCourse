@@ -73,3 +73,10 @@ Books Index/Create/New Routes
   - we are not putting coverimage name in this book object yet and thats bcus we need to create the image file from our filesystem, get the name from that, and then save that into our book object the easiest way to do that is to use multer
   - multer allows you to work on multi-part forms, which is precisely a file form
   -
+
+## Authors Show/Edit/Update/Delete Routes
+- Finish backend for our author
+- create before actions for our mongoose models to make sure our data integrity is kept in check
+- look a little on how to debug some probs. that may arise
+- run `npm i method-override`
+  - this allows us to take a post form, send that to our server with a special parameter that tells us if we're doing a put or delete request, and then our server will be smart enough to actually call the correct router for delete or put based on the specific parameter
